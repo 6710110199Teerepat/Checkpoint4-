@@ -1,23 +1,23 @@
-name: GitHub Actions Demo
+name: Node.js CI
 
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest  # รันบนเครื่อง Ubuntu จำลอง
+  build:
+    runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
 
-      - name: Install Dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Run Test Script
-        run: echo "Testing complete! Ready for deployment."
+    - name: Run test
+      run: npm test

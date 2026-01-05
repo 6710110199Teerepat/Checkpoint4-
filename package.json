@@ -1,0 +1,13 @@
+{
+  "name": "github-actions-demo",
+  "version": "1.0.0",
+  "description": "Demo CI/CD Pipeline",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Building project...' && exit 0",
+    "test": "echo 'Testing project...' && exit 0"
+  },
+  "keywords": [],
+  "author": "Student",
+  "license": "ISC"
+}
